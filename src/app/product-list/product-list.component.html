@@ -1,0 +1,41 @@
+<body>
+<h2>Products in Tom's shop</h2>
+
+<div class="" *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'" >
+      {{ product.id  }}  {{ product.name }}  Price: {{ product.price }} € 
+  </a>
+  </h3>
+  <p *ngIf = "product.description">
+    Description: {{ product.description }}
+  </p>
+
+ 
+
+  <div>
+    <table>
+      <th>
+        <button class="btn btn-primary" (click) = "share()">
+          Share
+        </button>
+      </th>
+      <th>
+        <app-product-alerts 
+          [product]="product"
+          (notify) = "onNotify()">
+        </app-product-alerts>
+      </th>
+    </table>
+  </div>
+  
+
+</div>
+</body>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
