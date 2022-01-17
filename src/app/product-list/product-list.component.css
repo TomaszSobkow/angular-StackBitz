@@ -1,11 +1,12 @@
 
 body{
-  background-color: lightgray;
-  padding: 2px;
+  background-color:azure;
+  padding: 2%;
   
 }
-.column{
-  
+table{
+  border: 3px double blue;
+  border-top-color: red;
 }
 /*
 Copyright Google LLC. All Rights Reserved.
