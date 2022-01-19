@@ -1,10 +1,10 @@
 <body>
-    <h2>Product Details</h2>
-
-<div *ngIf="product">
-    <h3> {{ product.name}} </h3>
-    <h4> {{ product.price | currency:'EUR'}} </h4>
-    <p>  {{  product.description}} </p>
-    
-</div>
+    <div class = "card" *ngIf="product">
+        <img class="card-img-top" src="src/assets/productPictures/iPhoneXL.png">
+        <h2>{{product.name }} Details</h2>
+        <h4> Price: {{ product.price | currency:'EUR'}} </h4>
+        <p>  {{  product.description}} </p>
+        <button (click)="addToCart(product)" class = "btn btn-info btn-lg btn-block">Buy</button>
+        
+    </div>
 </body>

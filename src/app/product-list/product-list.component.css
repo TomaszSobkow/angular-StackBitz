@@ -4,9 +4,10 @@ body{
   padding: 2%;
   
 }
-table{
-  border: 3px double blue;
-  border-top-color: red;
+.card{
+  margin: 4% 0 ;
+  padding: 2%;
+  width: 28rem;
 }
 /*
 Copyright Google LLC. All Rights Reserved.

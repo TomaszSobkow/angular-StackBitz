@@ -1,19 +1,21 @@
 <body>
 <h2>Products in Tom's shop</h2>
 
-<div class="" *ngFor="let product of products">
-  <h3>
-    <a 
-      [title]="product.name + ' details'" 
-      [routerLink]="['/products', product.id]">
-      {{ product.name }} 
-  </a>
-  </h3>
+<div class="card" *ngFor="let product of products">
+  <div class = "card-body">
+    <h5 class="card-title">
+      <a 
+        [title]="'Click for '+product.name + ' details'" 
+        [routerLink]="['/products', product.id]">
+        {{ product.name }} 
+      </a>
+    </h5>
+  </div>
   <p *ngIf = "product.description">
     Description: {{ product.description }}
   </p>
 
- 
+
   <div>
     <table>
       <th>
@@ -29,7 +31,6 @@
       </th>
     </table>
   </div>
-  
 
 </div>
 </body>

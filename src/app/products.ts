@@ -3,31 +3,36 @@ export interface Product {
   name: string;
   price: number;
   description: string;
+  productPicturePath: string;
 }
 
 export const products = [
   {
     id: 1,
-    name: 'Phone XL',
+    name: 'iPhone XL',
     price: 799,
-    description: 'A large phone with One of the best screens'
+    description: 'A large phone with One of the best screens',
+    productPicturePath: '../productPictures/iPhone XL.png'
   },
   {
     id: 2,
-    name: 'Phone Mini',
+    name: 'iPhone Mini',
     price: 699,
-    description: 'A great phone with one of the best cameras'
+    description: 'A great phone with one of the best cameras',
+    productPicturePath: ''
   },
   {
     id: 3,
-    name: 'Phone Standard',
+    name: 'iPhone Standard',
     price: 1299,
-    description: ''
+    description: '',
+    productPicturePath: ''
   },{
     id: 4,
-    name: 'Phone 11',
+    name: 'iPhone 11',
     price: 499,
-    description: 'My own device'
+    description: 'My own device',
+    productPicturePath: ''
   },
 ];
 
