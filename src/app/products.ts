@@ -12,7 +12,7 @@ export const products = [
     name: 'iPhone XL',
     price: 799,
     description: 'A large phone with One of the best screens',
-    productPicturePath: '../productPictures/iPhone XL.png'
+    productPicturePath: '/assets/productPictures/iPhoneXL.png'
   },
   {
     id: 2,

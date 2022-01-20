@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -10,9 +11,23 @@ export class CartComponent implements OnInit {
 
   items= this.cartService.getItems();
 
-  constructor( private cartService : CartService) { }
+  constructor( private cartService : CartService,
+               private formBuilder : FormBuilder,
+              ) { }
+
+  checkoutForm = this.formBuilder.group({
+    name: '',
+    address:''
+  })
+
+  onSubmit(): void{
+    this.items = this.cartService.clearCart();
+    window.alert('Your order has been sumbited');
+    this.checkoutForm.reset();
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
